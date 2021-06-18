@@ -5,9 +5,13 @@
     owner: "{{app_username}}"
     mode: '500'
     state: file
-- name: Packages Installed
+- name: Packages Installed1
   debug:
-    msg: Installed "{{java_package}}" is installed.
+    msg: Installed "{{java_package1}}" is installed.
+
+- name: Packages Installed2
+  debug:
+    msg: Installed "{{java_package2}}"
 
 - name: Created a Directory
   debug:

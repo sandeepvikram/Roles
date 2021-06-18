@@ -9,12 +9,14 @@
     update_cache: yes
     state: present 
   notify:
-    - Packages Installed
+    - Packages Installed1
   when: ansible_facts ['distribution'] == "Ubuntu"
 - name: Update CentOS Packages and install Java
   yum:
     name: "{{java_package2}}" 
     state: present
+  notify:
+    - Packages Installed2  
   when: ansible_facts ['distribution'] == "CentOS"
 - name: Create a Spring pet Clinic Directory
   ansible.builtin.file:
