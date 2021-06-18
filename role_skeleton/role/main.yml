@@ -1,0 +1,12 @@
+---
+- name: install spring pet clinic
+  become: yes
+  hosts: appserver
+  roles:
+    - springpetclinic
+
+- name: install LAMP
+  become: yes
+  hosts: dbserver
+  roles:
+    - lamp    
